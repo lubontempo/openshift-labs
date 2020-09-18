@@ -47,14 +47,14 @@ public class ServletServer {
 
     public static void main(final String[] args) {
         try {
-
             DeploymentInfo servletBuilder = deployment()
                     .setClassLoader(ServletServer.class.getClassLoader())
                     .setContextPath(MYAPP)
                     .setDeploymentName("test.war")
                     .addServlets(
                             servlet("MessageServlet", MessageServlet.class)
-                                    .addInitParam("message", "Olaaa Nelson, Alexandre e Lucas!! Como estamos ate agora? :-) ")
+                                    .addInitParam("message", "Olá, Nelson, Alexandre e Lucas! Como estamos até agora? :-) :: " +
+                                    							System.getenv("HOSTNAME"))
                                     .addMapping("/*"),
                             servlet("MyServlet", MessageServlet.class)
                                     .addInitParam("message", "MyServlet")
