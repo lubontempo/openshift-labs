@@ -53,7 +53,7 @@ public class ServletServer {
                     .setDeploymentName("test.war")
                     .addServlets(
                             servlet("MessageServlet", MessageServlet.class)
-                                    .addInitParam("message", "Olaaaaa Nelson, Alexandre, Lucas e demais! Como estamos ate agora? :-) \n:: " +
+                                    .addInitParam("message", "Olaaaaa Clodoaldo, Edson e Joackson! Como estamos ate agora? :-) \n:: " +
                                     							System.getenv("HOSTNAME"))
                                     .addMapping("/*"),
                             servlet("MyServlet", MessageServlet.class)
